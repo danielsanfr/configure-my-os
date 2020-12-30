@@ -1,0 +1,16 @@
+- name: Uninstall nautilus
+  community.general.pacman:
+    name:
+      - nautilus-admin
+      - nautilus-empty-file
+      - python-nautilus
+      - nautilus
+      - libnautilus-extension
+    state: absent
+
+- name: Install nautilus-typeahead
+  community.general.pacman:
+    name:
+      - nautilus-typeahead
+      - nautilus-admin
+    state: present
