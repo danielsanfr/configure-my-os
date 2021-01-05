@@ -1,3 +1,7 @@
+- name: Check if nautilus-typeahead is installed
+  command: pacman -Q nautilus-typeahead
+  register: pacman_check
+
 - name: Uninstall nautilus
   community.general.pacman:
     name:
@@ -7,6 +11,7 @@
       - nautilus
       - libnautilus-extension
     state: absent
+  when: pacman_check.stdout.find("was not found") != -1
 
 - name: Install nautilus-typeahead
   community.general.pacman:
