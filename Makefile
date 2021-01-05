@@ -18,7 +18,7 @@ SOURCE_VENV=. ${VENV_DIR}/bin/activate
 all: .venv
 	echo "Installing my OS..."
 	${SOURCE_VENV}
-	sudo ansible-playbook playbook.yml
+	ansible-playbook --ask-become-pass playbook.yml
 	echo ""
 	echo "####################################################################################################"
 	echo ""
