@@ -1,6 +1,0 @@
----
-- hosts: localhost
-  become: yes
-  roles:
-    - manjaro-bloatware
-    - gnome-adjust

@@ -1,0 +1,6 @@
+- name: Others
+  community.general.pacman:
+    name:
+      - vym
+      - minder
+    state: present

@@ -1,0 +1,11 @@
+- name: Others
+  community.general.pacman:
+    name:
+      - ciano
+      - cheese
+      - lollypop
+      - obs-studio
+      - simplescreenrecorder
+      - gnome-sound-recorder
+      - vlc
+    state: present

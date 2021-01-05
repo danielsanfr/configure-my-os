@@ -1,0 +1,13 @@
+- name: Others
+  community.general.pacman:
+    name:
+      - gnome-break-timer
+      - gnome-todo
+      - gnome-notes
+      - catfish
+      - zim
+      - copyq
+      - keepassxc
+      - alacarte
+      - android-file-transfer
+    state: present

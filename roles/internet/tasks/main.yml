@@ -1,0 +1,29 @@
+- name: Remote control
+  community.general.pacman:
+    name:
+      - remmina
+      - freerdp
+      - libvncserver
+    state: present
+
+- name: Gnome settings sharing
+  community.general.pacman:
+    name:
+      - gnome-remote-desktop
+      - gnome-user-share
+      - rygel
+    state: present
+
+- name: Others
+  community.general.pacman:
+    name:
+      - firefox
+      - chromium
+      - fractal
+      - fragments
+      - uget
+      - ipscan
+      - wireshark-qt
+      - gnome-maps
+      - epiphany
+    state: present

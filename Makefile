@@ -18,7 +18,16 @@ SOURCE_VENV=. ${VENV_DIR}/bin/activate
 all: .venv
 	echo "Installing my OS..."
 	${SOURCE_VENV}
-	ansible-playbook --ask-become-pass playbook.yml
+	ansible-playbook --ask-become-pass core-playbook.yml
+	echo ""
+	echo "####################################################################################################"
+	echo ""
+	echo "Finish!"
+
+video-card: .venv
+	echo "Installing my OS (with video card support)..."
+	${SOURCE_VENV}
+	ansible-playbook --ask-become-pass video-card-playbook.yml
 	echo ""
 	echo "####################################################################################################"
 	echo ""

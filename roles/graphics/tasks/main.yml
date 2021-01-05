@@ -1,0 +1,9 @@
+- name: Others
+  community.general.pacman:
+    name:
+      - drawing
+      - flameshot
+      - gimp
+      - gthumb
+      - peek
+    state: present

@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+  become: yes
+  roles:
+    - manjaro-bloatware
+    - gnome-adjust
+    - games
+    - office
+    - internet
+    - sound-and-video
+    - graphics
+    - utilities
+    - system
+    - programming

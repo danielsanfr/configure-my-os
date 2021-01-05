@@ -1,0 +1,37 @@
+- name: USB image writer
+  community.general.pacman:
+    name:
+      - gnome-multi-writer
+      - imagewriter
+      - ventoy
+    state: present
+
+- name: CLI
+  community.general.pacman:
+    name:
+      - fish
+      - lsd
+      - bat
+      - httpie
+      - tree
+      - yay
+      - git
+    state: present
+
+- name: Others
+  community.general.pacman:
+    name:
+      - ibus-typing-booster
+      - gnome-firmware
+      - gnome-system-log
+      - gnome-usage
+      - gnome-tweaks
+      - plank
+      - tilix
+      - cpu-x
+      - psensor
+      - virtualbox
+      - virtualbox-guest-iso
+      - hardinfo
+      - font-manager
+    state: present

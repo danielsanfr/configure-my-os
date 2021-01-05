@@ -1,0 +1,13 @@
+- name: Others
+  community.general.pacman:
+    name:
+      - gnome-2048
+      - gnome-chess
+      - gnome-mines
+      - gnome-sudoku
+      - gnome-games
+      - lightsoff
+      - snes9x-gtk
+      - lutris
+      - steam-manjaro
+    state: present

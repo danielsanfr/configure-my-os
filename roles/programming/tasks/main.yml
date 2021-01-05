@@ -1,0 +1,52 @@
+- name: Remove vi
+  community.general.pacman:
+    name:
+      - vi
+      - vim
+    state: absent
+
+- name: Neovim
+  community.general.pacman:
+    name:
+      - neovim
+    state: present
+
+- name: Docker
+  community.general.pacman:
+    name:
+      - docker
+      - docker-compose
+    state: present
+
+- name: Data browsers
+  community.general.pacman:
+    name:
+      - sqlitebrowser
+    state: present
+
+- name: Java
+  community.general.pacman:
+    name:
+      - jdk11-openjdk
+      - jre11-openjdk
+      - jre11-openjdk-headless
+    state: present
+
+- name: Node.js
+  community.general.pacman:
+    name:
+      - nodejs-lts-fermium
+      - npm
+    state: present
+
+- name: Others
+  community.general.pacman:
+    name:
+      - moserial
+      - cmake
+      - gnome-builder
+      - sysprof
+      - gitg
+      - meld
+      - qtcreator
+    state: present
