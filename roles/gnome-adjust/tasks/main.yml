@@ -4,18 +4,18 @@
 
 - name: Uninstall nautilus
   community.general.pacman:
+    state: absent
     name:
       - nautilus-admin
       - nautilus-empty-file
       - python-nautilus
       - nautilus
       - libnautilus-extension
-    state: absent
   when: pacman_check.stdout.find("was not found") != -1
 
 - name: Install nautilus-typeahead
   community.general.pacman:
+    state: present
     name:
       - nautilus-typeahead
       - nautilus-admin
-    state: present

@@ -1,46 +1,47 @@
 - name: Remove vi
   community.general.pacman:
+    state: absent
     name:
       - vi
       - vim
-    state: absent
 
 - name: Neovim
   community.general.pacman:
+    state: present
     name:
       - neovim
-    state: present
 
 - name: Docker
   community.general.pacman:
+    state: present
     name:
       - docker
       - docker-compose
-    state: present
 
 - name: Data browsers
   community.general.pacman:
+    state: present
     name:
       - sqlitebrowser
-    state: present
 
 - name: Java
   community.general.pacman:
+    state: present
     name:
       - jdk11-openjdk
       - jre11-openjdk
       - jre11-openjdk-headless
-    state: present
 
 - name: Node.js
   community.general.pacman:
+    state: present
     name:
       - nodejs-lts-fermium
       - npm
-    state: present
 
 - name: Others
   community.general.pacman:
+    state: present
     name:
       - moserial
       - cmake
@@ -49,4 +50,33 @@
       - gitg
       - meld
       - qtcreator
+
+- name: Install programming AUR packages
+  become_user: "{{ current_user }}"
+  aur:
+    use: yay
+    extra_args: --removemake
     state: present
+    name:
+      - javafx11-scenebuilder
+      - lazydocker
+      - valentina-studio
+      - robo3t-bin
+
+- debug:
+    msg: Installing Android Studio...
+
+- debug:
+    msg: Installing Intellij IDEA...
+
+- debug:
+    msg: Installing Intellij PyCharm...
+
+- debug:
+    msg: Installing VS Code...
+
+- debug:
+    msg: Installing Sublime Text...
+
+- debug:
+    msg: Installing Sublime Merge...

@@ -6,11 +6,11 @@ Throughout my **GNU/Linux** user journey I have used several distributions and d
 
 In every distribution and every _DE_, I always tried to create a script for the repetitive task of reinstalling everything from scratch.
 
-In this latest version, I'm using [Make](https://www.gnu.org/software/make) and [Ansible](https://www.ansible.com/) to automate things a little more.
+In this latest version, I'm using [Make](https://www.gnu.org/software/make) and [Ansible](https://www.ansible.com/) to automate things a little more. To install AUR packages I use [ansible-aur](https://github.com/kewlfft/ansible-aur) with [yay](https://github.com/Jguer/yay).
 
 ## Usage
 
-First, we need to install `make`, update and upgrade the system:
+First, we need to install `make` and `yay`, update and upgrade the system:
 
 ```bash
 ./setup.sh

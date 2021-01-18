@@ -14,6 +14,7 @@ SOURCE_VENV=. ${VENV_DIR}/bin/activate
 	${SOURCE_VENV}
 	pip install --upgrade pip -q
 	pip install -r requirements.txt -q
+	ansible-galaxy install kewlfft.aur
 
 all: .venv
 	echo "Installing my OS..."
@@ -32,6 +33,10 @@ video-card: .venv
 	echo "####################################################################################################"
 	echo ""
 	echo "Finish!"
+
+# Some python apps may have this bug: https://github.com/Huluti/Curtail/issues/45
+install-aur-python-apps:
+	yay -S --removemake --nodiffmenu --noconfirm curtail
 
 clean:
 	rm -rf ${TMP_DIR}

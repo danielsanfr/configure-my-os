@@ -1,5 +1,17 @@
 - name: Others
   community.general.pacman:
+    state: present
     name:
       - gwe
+
+- name: Install graphics AUR packages
+  become_user: "{{ current_user }}"
+  aur:
+    use: yay
+    extra_args: --removemake
     state: present
+    name:
+      - gst
+
+- debug:
+    msg: Installing Nvidia driver...

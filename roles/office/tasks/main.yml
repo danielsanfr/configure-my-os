@@ -1,6 +1,16 @@
 - name: Others
   community.general.pacman:
+    state: present
     name:
       - vym
       - minder
+
+- name: Install office AUR packages
+  become_user: "{{ current_user }}"
+  aur:
+    use: yay
+    extra_args: --removemake
     state: present
+    name:
+      - typora
+      - foxitreader

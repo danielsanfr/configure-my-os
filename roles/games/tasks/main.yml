@@ -1,5 +1,6 @@
 - name: Others
   community.general.pacman:
+    state: present
     name:
       - gnome-2048
       - gnome-chess
@@ -10,4 +11,3 @@
       - snes9x-gtk
       - lutris
       - steam-manjaro
-    state: present

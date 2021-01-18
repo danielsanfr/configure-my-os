@@ -1,21 +1,25 @@
 - name: Remote control
   community.general.pacman:
+    state: present
     name:
       - remmina
       - freerdp
       - libvncserver
-    state: present
 
+# To use gnome sharing feature see these references:
+# https://gitlab.gnome.org/GNOME/gnome-user-share/-/issues/16
+# To see open ports: lsof -i -P -n
 - name: Gnome settings sharing
   community.general.pacman:
+    state: present
     name:
       - gnome-remote-desktop
       - gnome-user-share
       - rygel
-    state: present
 
 - name: Others
   community.general.pacman:
+    state: present
     name:
       - firefox
       - chromium
@@ -26,4 +30,17 @@
       - wireshark-qt
       - gnome-maps
       - epiphany
+
+- name: Install internet AUR packages
+  become_user: "{{ current_user }}"
+  aur:
+    use: yay
+    extra_args: --removemake
     state: present
+    name:
+      - dropbox
+      - nautilus-dropbox
+      - slack-desktop
+
+- debug:
+    msg: Installing Postman...

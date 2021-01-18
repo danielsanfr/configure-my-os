@@ -1,9 +1,20 @@
 - name: Others
   community.general.pacman:
+    state: present
     name:
       - drawing
       - flameshot
       - gimp
       - gthumb
       - peek
-    state: present
+      - eog
+      - eog-plugins
+
+#- name: Install graphics AUR packages
+#  become_user: "{{ current_user }}"
+#  aur:
+#    use: yay
+#    extra_args: --removemake
+#    state: present
+#    name:
+#      - curtail

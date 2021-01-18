@@ -1,13 +1,14 @@
 - name: USB image writer
   community.general.pacman:
+    state: present
     name:
       - gnome-multi-writer
       - imagewriter
       - ventoy
-    state: present
 
 - name: CLI
   community.general.pacman:
+    state: present
     name:
       - fish
       - lsd
@@ -16,10 +17,10 @@
       - tree
       - yay
       - git
-    state: present
 
 - name: Others
   community.general.pacman:
+    state: present
     name:
       - ibus-typing-booster
       - gnome-firmware
@@ -34,4 +35,14 @@
       - virtualbox-guest-iso
       - hardinfo
       - font-manager
+
+- name: Install system AUR packages
+  become_user: "{{ current_user }}"
+  aur:
+    use: yay
+    extra_args: --removemake
     state: present
+    name:
+      - alacritty
+      - ulauncher
+      - git-delta-bin

@@ -1,31 +1,32 @@
 - name: Remove stoken
   community.general.pacman:
+    state: absent
     name:
       - networkmanager-openconnect
       - openconnect
       - stoken
-    state: absent
 
 - name: Remove kvantum
   community.general.pacman:
+    state: absent
     name:
       - manjaro-gnome-assets
       - kvantum-theme-matchama
       - kvantum-qt5
       - kwindowsystem
-    state: absent
 
 - name: Remove ranger
   community.general.pacman:
+    state: absent
     name:
       - bmenu
       - pacui
       - manjaro-ranger-settings
       - ranger
-    state: absent
 
 - name: Remove manjaro bloatware
   community.general.pacman:
+    state: absent
     name:
       - lshw
       - gtkhash-nautilus
@@ -38,10 +39,10 @@
       - manjaro-dynamic-wallpaper
       - manjaro-gnome-tour
       - manjaro-hello
-    state: absent
 
 - name: Remove gnome-shell extensions
   community.general.pacman:
+    state: absent
     name:
       - gnome-shell-extensions
       - gnome-shell-extension-appindicator
@@ -55,7 +56,6 @@
       - gnome-shell-extension-gsconnect
       - gnome-shell-extension-gamemode
       - pop-shell-shortcuts
-    state: absent
 
 - name: Workaround for remove gnome-shell-extensions
   command: pacman -R --noconfirm gnome-shell-extensions
