@@ -25,10 +25,10 @@ all: .venv
 	echo ""
 	echo "Finish!"
 
-video-card: .venv
-	echo "Installing my OS (with video card support)..."
+graphic-card: .venv
+	echo "Installing my OS (with graphic card support)..."
 	${SOURCE_VENV}
-	ansible-playbook --ask-become-pass video-card-playbook.yml
+	ansible-playbook --ask-become-pass graphic-card-playbook.yml
 	echo ""
 	echo "####################################################################################################"
 	echo ""
