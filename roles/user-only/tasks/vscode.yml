@@ -1,0 +1,46 @@
+- name: "VS Code : Check checksum"
+  uri:
+    url: https://code.visualstudio.com/sha?build=stable
+  register: vscode_api_result
+
+- name: "VS Code : Create version variable"
+  set_fact:
+    vscode_same_version: "{{ vscode_api_result.json.products[14].sha256hash == lookup('file', '~/.local/applications/vscode/sha256hash.txt', errors='ignore') }}"
+
+- name: "VS Code : Download"
+  get_url:
+    url: https://code.visualstudio.com/sha/download?build=stable&os=linux-x64
+    dest: ~/Downloads/ansible/vscode-stable-x64.tar.gz
+    checksum: "sha256:{{ vscode_api_result.json.products[14].sha256hash }}"
+  when: not vscode_same_version and vscode_api_result.json.products[14].platform.os == 'linux-x64'
+
+- name: "VS Code : Extract"
+  unarchive:
+    src: ~/Downloads/ansible/vscode-stable-x64.tar.gz
+    dest: ~/.local/applications/
+  when: not vscode_same_version
+
+- name: "VS Code : Checks if it was extracted"
+  stat:
+    path: ~/.local/applications/VSCode-linux-x64
+  register: vscode_extracted
+
+# https://stackoverflow.com/questions/8488253/how-to-force-cp-to-overwrite-without-confirmation
+- name: "VS Code : Rename directory"
+  shell: \cp -rafu ~/.local/applications/VSCode-linux-x64/* ~/.local/applications/vscode
+  when: vscode_extracted.stat.exists
+
+- name: "VS Code : Create sha256hash.txt"
+  copy:
+    dest: ~/.local/applications/vscode/sha256hash.txt
+    content: "{{ vscode_api_result.json.products[14].sha256hash }}"
+  when: not vscode_same_version
+
+- name: "VS Code : Checks whether old directory still exists"
+  stat:
+    path: ~/.local/applications/VSCode-linux-x64
+  register: vscode_extracted
+
+- name: "VS Code : Remove old directory"
+  command: rm -rf ~/.local/applications/VSCode-linux-x64
+  when: vscode_extracted.stat.exists

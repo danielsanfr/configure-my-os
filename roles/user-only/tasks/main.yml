@@ -1,0 +1,11 @@
+- name: Create directory to download files if it does not exist
+  file:
+    path: ~/Downloads/ansible/
+    state: directory
+
+- name: Create local user applications directory if it does not exist
+  file:
+    path: ~/.local/applications/
+    state: directory
+
+- import_tasks: vscode.yml

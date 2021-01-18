@@ -34,6 +34,15 @@ graphic-card: .venv
 	echo ""
 	echo "Finish!"
 
+user-only: .venv
+	echo "Installing my OS (with user only apps support)..."
+	${SOURCE_VENV}
+	ansible-playbook user-only-playbook.yml
+	echo ""
+	echo "####################################################################################################"
+	echo ""
+	echo "Finish!"
+
 # Some python apps may have this bug: https://github.com/Huluti/Curtail/issues/45
 install-aur-python-apps:
 	yay -S --removemake --nodiffmenu --noconfirm curtail
