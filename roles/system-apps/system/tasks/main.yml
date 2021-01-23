@@ -17,6 +17,9 @@
       - tree
       - yay
       - git
+      - fzf
+      - asciinema
+      - progress
 
 - name: Others
   community.general.pacman:
@@ -46,3 +49,4 @@
       - alacritty
       - ulauncher
       - git-delta-bin
+      - duf-bin

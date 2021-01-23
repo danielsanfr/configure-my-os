@@ -16,10 +16,19 @@ SOURCE_VENV=. ${VENV_DIR}/bin/activate
 	pip install -r requirements.txt -q
 	ansible-galaxy install kewlfft.aur
 
-all: .venv
+help:
+	echo "####################################### Configure my os help #######################################"
+	echo "Options:"
+	echo "- system-apps: Install applications for all users of the system."
+	echo "- graphic-card: Install applications and settings for NVidia graphics cards."
+	echo "- user-apps: Install applications for current user."
+	echo "- clean: Remove temporary script directory."
+	echo "####################################################################################################"
+
+system-apps: .venv
 	echo "Installing my OS..."
 	${SOURCE_VENV}
-	ansible-playbook --ask-become-pass core-playbook.yml
+	ansible-playbook --ask-become-pass system-apps-playbook.yml
 	# Some python apps may have this bug: https://github.com/Huluti/Curtail/issues/45
 	deactivate
 	yay -S --removemake --nodiffmenu --noconfirm curtail
@@ -48,6 +57,3 @@ user-only: .venv
 
 clean:
 	rm -rf ${TMP_DIR}
-
-help:
-	echo "Configure my OS"

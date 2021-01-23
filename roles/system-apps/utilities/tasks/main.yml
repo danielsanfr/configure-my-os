@@ -5,6 +5,7 @@
       - gnome-break-timer
       - gnome-todo
       - gnome-notes
+      - gnome-passwordsafe
       - gedit
       - gedit-plugins
       - catfish

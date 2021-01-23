@@ -1,0 +1,17 @@
+---
+- hosts: localhost
+  become: yes
+  vars:
+    current_user: "{{ lookup('env', 'USER') }}"
+  roles:
+    - kewlfft.aur
+    - manjaro-bloatware
+    - roles/system-apps/gnome-adjust
+    - roles/system-apps/games
+    - roles/system-apps/office
+    - roles/system-apps/internet
+    - roles/system-apps/sound-and-video
+    - roles/system-apps/graphics
+    - roles/system-apps/utilities
+    - roles/system-apps/system
+    - roles/system-apps/programming
