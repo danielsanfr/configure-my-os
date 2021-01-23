@@ -20,6 +20,9 @@ all: .venv
 	echo "Installing my OS..."
 	${SOURCE_VENV}
 	ansible-playbook --ask-become-pass core-playbook.yml
+	# Some python apps may have this bug: https://github.com/Huluti/Curtail/issues/45
+	deactivate
+	yay -S --removemake --nodiffmenu --noconfirm curtail
 	echo ""
 	echo "####################################################################################################"
 	echo ""
@@ -42,10 +45,6 @@ user-only: .venv
 	echo "####################################################################################################"
 	echo ""
 	echo "Finish!"
-
-# Some python apps may have this bug: https://github.com/Huluti/Curtail/issues/45
-install-aur-python-apps:
-	yay -S --removemake --nodiffmenu --noconfirm curtail
 
 clean:
 	rm -rf ${TMP_DIR}
