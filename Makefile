@@ -75,6 +75,10 @@ user-configs: .venv
 	curl -L https://get.oh-my.fish | fish
 	echo "omf install spacefish" | fish
 	chsh -s /usr/bin/fish
+	echo "Configuring super key..."
+	gsettings set org.gnome.mutter overlay-key 'Super_R'
+	gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['']"
+	gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward "['']"
 	echo ""
 	echo "####################################################################################################"
 	echo ""
