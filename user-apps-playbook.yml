@@ -78,3 +78,23 @@
         src: desktop-entries/
         dest: ~/.local/share/applications
         directory_mode: true
+    - name: "User apps : Create links for user apps on local bin directory"
+      file:
+        src: "~/.local/applications/{{ item.src }}"
+        dest: "~/.local/bin/{{ item.dest }}"
+        state: link
+      with_items:
+        - { src: telegram/Telegram, dest: telegram }
+        - { src: android-studio/bin/studio.sh, dest: android-studio }
+        - { src: jetbrains-intellij-idea/bin/idea.sh, dest: idea }
+        - { src: jetbrains-pycharm/bin/pycharm.sh, dest: pycharm  }
+        - { src: postman/Postman, dest: postman }
+        - { src: sublime-merge/sublime_merge, dest: smerge }
+        - { src: sublime-text/sublime_text, dest: subl }
+        - { src: toggl/TogglDesktop.sh, dest: toggl }
+        - { src: vscode/bin/code, dest: code }
+    - name: "User apps : Create links for user apps on local bin directory"
+      copy:
+        dest: "~/.local/bin/yed"
+        content: "#!/bin/bash\n\njava -jar /home/daniel/.local/applications/yed/yed.jar\n"
+        mode: a+x
