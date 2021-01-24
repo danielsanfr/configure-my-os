@@ -1,0 +1,14 @@
+# Static table lookup for hostnames.
+# See hosts(5) for details.
+
+127.0.0.1       localhost
+::1             localhost ip6-localhost ip6-loopback
+ff02::1         ip6-allnodes
+ff02::2         ip6-allrouters
+
+192.168.0.2     san-desktop
+192.168.0.3     san-smartphone
+192.168.0.4     erika-smartphone
+192.168.0.5     chromecast
+192.168.0.20    raspberry-server
+192.168.0.25    printer

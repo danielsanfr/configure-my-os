@@ -1,0 +1,14 @@
+/* Reference: https://unix.stackexchange.com/a/613421 */
+
+headerbar.default-decoration {
+    min-height: 18px;
+    margin: 0px 0px 0px 0px;
+    padding: 2px 2px 2px 2px;
+}
+
+headerbar.default-decoration button.titlebutton {
+    min-height: 16px;
+    min-width: 16px;
+    margin: 0px 0px 0px 0px;
+    padding: 2px 2px 2px 2px;
+}

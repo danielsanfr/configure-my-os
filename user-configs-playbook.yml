@@ -1,0 +1,26 @@
+---
+- hosts: localhost
+  tasks:
+    - name: "User configs : Create configuration directories"
+      file:
+        path: "~/{{ item }}"
+        state: directory
+      with_items:
+        - .ssh/
+        - .gnupg/
+        - .config/fish/
+        - .config/gtk-3.0/
+        - .config/tilix/schemes/
+    - name: "User configs : Copy configuration files"
+      copy:
+        src: "user-configs/{{ item }}"
+        dest: "~/{{ item }}"
+        backup: true
+      with_items:
+        - .gitconfig
+        - .nanorc
+        - .ssh/config
+        - .gnupg/gpg-agent.conf
+        - .config/fish/config.fish
+        - .config/gtk-3.0/gtk.css
+        - .config/tilix/schemes/Dracula.json

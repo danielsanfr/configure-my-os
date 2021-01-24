@@ -1,0 +1,40 @@
+[user]
+    name = Daniel San
+    email = daniel.samrocha@gmail.com
+    signingkey = A255F9F67FE8A090
+[commit]
+    gpgsign = true
+[gui]
+    editor = subl
+[core]
+    editor = nano
+    # pager = less -+$LESS -R
+    pager = delta --width 160 | less -+$LESS -R
+[interactive]
+    diffFilter = delta --width 160 --color-only
+[diff]
+    tool = smerge
+    colorMoved = default
+[pull]
+    rebase = false
+[difftool]
+    prompt = false
+[difftool "smerge"]
+    trustExitCode = true
+    cmd = smerge mergetool \"$LOCAL\" \"$REMOTE\"
+[merge]
+    tool = smerge
+[mergetool]
+    prompt = false
+    keepBackup = true
+[mergetool "smerge"]
+    cmd = smerge mergetool \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
+    trustExitCode = true
+[delta]
+    syntax-theme = Dracula
+    features = side-by-side line-numbers decorations
+    whitespace-error-style = 22 reverse
+[delta "decorations"]
+    commit-decoration-style = bold yellow box ul
+    file-style = bold yellow ul
+    file-decoration-style = none

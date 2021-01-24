@@ -19,9 +19,11 @@ SOURCE_VENV=. ${VENV_DIR}/bin/activate
 help:
 	echo "####################################### Configure my os help #######################################"
 	echo "Options:"
-	echo "- system-apps: Install applications for all users of the system."
+	echo "- system-apps: Install system-wide applications (accessible by all users)."
 	echo "- graphic-card: Install applications and settings for NVidia graphics cards."
 	echo "- user-apps: Install applications for current user."
+	echo "- system-configs: Add some system-wide configurations."
+	echo "- user-configs: Add some current user configurations."
 	echo "- clean: Remove temporary script directory."
 	echo "####################################################################################################"
 
@@ -50,6 +52,24 @@ user-apps: .venv
 	echo "Installing app on user scope..."
 	${SOURCE_VENV}
 	ansible-playbook user-apps-playbook.yml
+	echo ""
+	echo "####################################################################################################"
+	echo ""
+	echo "Finish!"
+
+system-configs: .venv
+	echo "Installing my OS..."
+	${SOURCE_VENV}
+	ansible-playbook --ask-become-pass system-configs-playbook.yml
+	echo ""
+	echo "####################################################################################################"
+	echo ""
+	echo "Finish!"
+
+user-configs: .venv
+	echo "Adding user configs..."
+	${SOURCE_VENV}
+	ansible-playbook user-configs-playbook.yml
 	echo ""
 	echo "####################################################################################################"
 	echo ""

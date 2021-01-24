@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  become: yes
+  tasks:
+    - name: "System configs : Copy configuration files"
+      copy:
+        src: "system-configs/{{ item }}"
+        dest: "/{{ item }}"
+        backup: true
+      with_items:
+        - etc/hosts
