@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Toggl
+GenericName=Time Traking
+Comment=Free Time Tracking Software
+Exec=/home/daniel/.local/applications/toggl/TogglDesktop.sh
+Terminal=false
+Icon=/home/daniel/.local/applications/toggl/share/icons/hicolor/256x256/apps/toggldesktop.png
+Categories=Development;
+StartupNotify=true
+Actions=Window;Document;

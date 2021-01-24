@@ -48,7 +48,7 @@
     state: absent
   when: not is_same_version
 
-- name: "Android SDK : "
+- name: "Android SDK : Set ANDROID_SDK_ROOT"
   command: ~/.local/sdks/android/cmdline-tools/tools/bin/sdkmanager --sdk_root=~/.local/sdks/android/
 
 - name: "Android SDK : Accept licenses"

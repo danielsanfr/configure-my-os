@@ -1,0 +1,10 @@
+[Desktop Entry]
+Categories=Development;IDE;
+Comment=Python IDE for professional developers
+Exec="/home/daniel/.local/applications/pycharm/bin/pycharm.sh" %f
+Icon=/home/daniel/.local/applications/pycharm/bin/pycharm.png
+Name=PyCharm Community
+StartupWMClass=jetbrains-pycharm-ce
+Terminal=false
+Type=Application
+Version=1.0

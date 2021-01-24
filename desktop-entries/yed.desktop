@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Icon=/home/daniel/.local/applications/yed/icons/yed128.png
+Exec=java -jar /home/daniel/.local/applications/yed/yed.jar
+StartupNotify=true
+StartupWMClass=com-yworks-A-yEd
+Name=yEd Graph Editor
+Categories=Application;Graphics;VectorGraphics;Java;
+

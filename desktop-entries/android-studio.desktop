@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Android Studio
+Icon=/home/daniel/.local/applications/android-studio/bin/studio.png
+Exec="/home/daniel/.local/applications/android-studio/bin/studio.sh" %f
+Comment=Fastest tools for building apps on every type of Android device.
+Categories=Development;IDE;
+Terminal=false
+StartupWMClass=jetbrains-studio

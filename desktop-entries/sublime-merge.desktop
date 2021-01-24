@@ -1,0 +1,13 @@
+[Desktop Entry]
+Actions=Window;Document;
+Categories=TextEditor;Development;
+Comment=Sophisticated Git client
+Exec=/home/daniel/.local/applications/sublime-merge/sublime_merge
+Icon=/home/daniel/.local/applications/sublime-merge/Icon/256x256/sublime-merge.png
+Name=Sublime Merge
+GenericName=Text Merge
+StartupNotify=true
+Terminal=false
+Type=Application
+Version=1.0
+X-Deepin-Vendor=user-custom

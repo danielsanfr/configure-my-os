@@ -1,0 +1,13 @@
+[Desktop Entry]
+Exec=/home/daniel/.local/applications/vscode/bin/code %f
+Icon=/home/daniel/.local/applications/vscode/resources/app/resources/linux/code.png
+# visual-studio-code
+Terminal=false
+Type=Application
+Name=Visual Studio Code
+Comment=Editor for building and debugging modern web and cloud applications
+Categories=Development;WebDevelopment;IDE;Utility;TextEditor;
+MimeType=text/plain;inode/directory;
+StartupNotify=true
+StartupWMClass=code
+

@@ -72,3 +72,9 @@
       app_folder: toggl
       extract_to: toggl
       skip_copy: true
+  tasks:
+    - name: "User apps : Copy desktop entries"
+      copy:
+        src: desktop-entries/
+        dest: ~/.local/share/applications
+        directory_mode: true

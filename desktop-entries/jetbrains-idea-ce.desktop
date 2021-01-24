@@ -1,0 +1,10 @@
+[Desktop Entry]
+Categories=Development;IDE;
+Comment=Capable and ergonomic Java IDE
+Exec="/home/daniel/.local/applications/idea-ic/bin/idea.sh" %f
+Icon=/home/daniel/.local/applications/idea-ic/bin/idea.png
+Name=IntelliJ IDEA Community
+StartupWMClass=jetbrains-idea-ce
+Terminal=false
+Type=Application
+Version=1.0
