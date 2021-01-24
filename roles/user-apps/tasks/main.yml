@@ -1,6 +1,6 @@
 - import_tasks: create-directories.yml
 
-- name: "{{ app_name }} : Set is same version variable"
+- name: "{{ app_name }} : Set is_same_version variable"
   set_fact:
     is_same_version: "{{ file_checksum == lookup('file', '~/.local/applications/' + app_folder + '/checksum.txt', errors='ignore') }}"
 
@@ -11,10 +11,21 @@
     checksum: "sha256:{{ file_checksum }}"
   when: not is_same_version
 
+- name: "{{ app_name }} : Create extrac_to directory if defined"
+  file:
+    path: "~/.local/applications/{{ extract_to }}"
+    state: directory
+  when: extract_to is defined
+
+- name: "{{ app_name }} : Set extract_to variable if not defined"
+  set_fact:
+    extract_to: ""
+  when: extract_to is not defined
+
 - name: "{{ app_name }} : Extract"
   unarchive:
     src: "~/Downloads/ansible/{{ filename }}"
-    dest: ~/.local/applications/
+    dest: "~/.local/applications/{{ extract_to }}"
   when: not is_same_version
   
 - name: "{{ app_name }} : Create app folder if not exist"
