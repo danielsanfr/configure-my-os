@@ -24,3 +24,17 @@
         - .config/fish/config.fish
         - .config/gtk-3.0/gtk.css
         - .config/tilix/schemes/Dracula.json
+    - name: "User configs : dconf : Nautilus default sort order"
+      community.general.dconf:
+        key: "/org/gnome/nautilus/preferences/default-sort-order"
+        value: "'type'"
+        state: present
+    - name: "User configs : dconf : Gnome Shell Super key"
+      community.general.dconf:
+        key: "{{ item.key }}"
+        value: "{{ item.value }}"
+        state: present
+      with_items:
+        - { key: "/org/gnome/mutter/overlay-key", value: "'Super_R'" }
+        - { key: "/org/gnome/desktop/wm/keybindings/switch-input-source", value: "['']" }
+        - { key: "/org/gnome/desktop/wm/keybindings/switch-input-source-backward", value: "['']" }
