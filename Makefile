@@ -70,6 +70,11 @@ user-configs: .venv
 	echo "Adding user configs..."
 	${SOURCE_VENV}
 	ansible-playbook user-configs-playbook.yml
+	echo "Configuring fish shell..."
+	deactivate
+	curl -L https://get.oh-my.fish | fish
+	echo "omf install spacefish" | fish
+	chsh -s /usr/bin/fish
 	echo ""
 	echo "####################################################################################################"
 	echo ""
