@@ -41,6 +41,3 @@
       - dropbox
       - nautilus-dropbox
       - slack-desktop
-
-- debug:
-    msg: Installing Postman...

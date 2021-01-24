@@ -77,7 +77,7 @@
       vars:
         app_name: Toggl Track
         file_checksum: e7ac3e77c0177d851be448c3b74ffbd0dc3c8e6ec2c7738b9d7eb1c1e830fb12
-        file_url: https://toggl-open-source.github.io/toggldesktop/download/linux_tar.gz-stable/
+        file_url: https://github.com/toggl-open-source/toggldesktop/releases/download/v7.5.324/toggldesktop_linux_7.5.324_x86_64.tar.gz
         filename: toggldesktop_linux_x86_64.tar.gz
         app_folder: toggl
         extracted_directory: toggldesktop_linux_x86_64
