@@ -1,0 +1,59 @@
+- import_tasks: ../../tasks/create-directories.yml
+
+# References:
+# https://stackoverflow.com/questions/37505709/how-do-i-download-the-android-sdk-without-downloading-android-studio
+# https://stackoverflow.com/questions/60440509/android-command-line-tools-sdkmanager-always-shows-warning-could-not-create-se/61176718#61176718
+
+- name: Create android cli tools directory if it does not exist
+  file:
+    path: ~/.local/sdks/android/cmdline-tools
+    state: directory
+
+- name: "Android SDK : Set is same version variable"
+  set_fact:
+    is_same_version: "{{ file_checksum == lookup('file', '~/.local/sdks/android/cmdline-tools/tools/checksum.txt', errors='ignore') }}"
+
+- name: "Android SDK : Download"
+  get_url:
+    url: "{{ file_url }}"
+    dest: "~/Downloads/ansible/{{ filename }}"
+    checksum: "sha256:{{ file_checksum }}"
+  when: not is_same_version
+
+- name: "Android SDK : Extract"
+  unarchive:
+    src: "~/Downloads/ansible/{{ filename }}"
+    dest: ~/.local/sdks/android/cmdline-tools
+  when: not is_same_version
+  
+- name: "Android SDK : Create app folder if not exist"
+  file:
+    path: "~/.local/sdks/android/cmdline-tools/tools"
+    state: directory
+  when: not is_same_version
+
+- name: "Android SDK : Copy files to app folder"
+  shell: "\\cp -rafu ~/.local/sdks/android/cmdline-tools/cmdline-tools/* ~/.local/sdks/android/cmdline-tools/tools"
+  when: not is_same_version
+
+- name: "Android SDK : Create checksum.txt"
+  copy:
+    dest: "~/.local/sdks/android/cmdline-tools/tools/checksum.txt"
+    content: "{{ file_checksum }}"
+  when: not is_same_version
+
+- name: "Android SDK : Remove old directory"
+  file:
+    path: "~/.local/sdks/android/cmdline-tools/cmdline-tools"
+    state: absent
+  when: not is_same_version
+
+- name: "Android SDK : "
+  command: ~/.local/sdks/android/cmdline-tools/tools/bin/sdkmanager --sdk_root=~/.local/sdks/android/
+
+- name: "Android SDK : Accept licenses"
+  shell: yes | ~/.local/sdks/android/cmdline-tools/tools/bin/sdkmanager --licenses
+
+- name: "Android SDK : Download SDK, Tools and AVD"
+  command: ~/.local/sdks/android/cmdline-tools/tools/bin/sdkmanager "platform-tools" "sources;android-30" "platforms;android-30" "build-tools;30.0.3" "system-images;android-30;google_apis_playstore;x86"
+

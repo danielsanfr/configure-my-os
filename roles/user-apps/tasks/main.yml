@@ -1,0 +1,41 @@
+- import_tasks: create-directories.yml
+
+- name: "{{ app_name }} : Set is same version variable"
+  set_fact:
+    is_same_version: "{{ file_checksum == lookup('file', '~/.local/applications/' + app_folder + '/checksum.txt', errors='ignore') }}"
+
+- name: "{{ app_name }} : Download"
+  get_url:
+    url: "{{ file_url }}"
+    dest: "~/Downloads/ansible/{{ filename }}"
+    checksum: "sha256:{{ file_checksum }}"
+  when: not is_same_version
+
+- name: "{{ app_name }} : Extract"
+  unarchive:
+    src: "~/Downloads/ansible/{{ filename }}"
+    dest: ~/.local/applications/
+  when: not is_same_version
+  
+- name: "{{ app_name }} : Create app folder if not exist"
+  file:
+    path: "~/.local/applications/{{ app_folder }}"
+    state: directory
+  when: not is_same_version and not skip_copy
+
+- name: "{{ app_name }} : Copy files to app folder"
+  shell: "\\cp -rafu ~/.local/applications/{{ extracted_directory }}/* ~/.local/applications/{{ app_folder }}"
+  when: not is_same_version and not skip_copy
+
+- name: "{{ app_name }} : Create checksum.txt"
+  copy:
+    dest: "~/.local/applications/{{ app_folder }}/checksum.txt"
+    content: "{{ file_checksum }}"
+  when: not is_same_version
+
+- name: "{{ app_name }} : Remove old directory"
+  file:
+    path: "~/.local/applications/{{ extracted_directory }}"
+    state: absent
+  when: not skip_copy and not is_same_version
+

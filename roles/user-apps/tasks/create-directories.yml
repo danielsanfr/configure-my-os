@@ -8,4 +8,8 @@
     path: ~/.local/applications/
     state: directory
 
-- import_tasks: vscode.yml
+- name: Create local user bin directory if it does not exist
+  file:
+    path: ~/.local/bin/
+    state: directory
+

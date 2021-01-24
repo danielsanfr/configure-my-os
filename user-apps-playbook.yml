@@ -1,0 +1,83 @@
+---
+- hosts: localhost
+  vars:
+    skip_copy: false
+  roles:
+    - roles/user-apps/vscode
+    - role: roles/user-apps/android
+      vars:
+        file_checksum: 87f6dcf41d4e642e37ba03cb2e387a542aa0bd73cb689a9e7152aad40a6e7a08
+        file_url: https://dl.google.com/android/repository/commandlinetools-linux-6858069_latest.zip
+        filename: android-commandlinetools-linux.zip
+    - role: user-apps
+      vars:
+        app_name: yEd
+        file_checksum: f1b8c878e45d476fd99e950c3469e7d7d9b433dab4efad8c1f8938dec9e2d897
+        file_url: https://www.yworks.com/resources/yed/demo/yEd-3.20.1.zip
+        filename: yed.zip
+        app_folder: yed
+        extracted_directory: yed-3.20.1
+    - role: user-apps
+      vars:
+        app_name: Sublime Text
+        file_checksum: 0b3c8ca5e6df376c3c24a4b9ac2e3b391333f73b229bc6e87d0b4a5f636d74ee
+        file_url: https://download.sublimetext.com/sublime_text_3_build_3211_x64.tar.bz2
+        filename: sublime_text_3_x64.tar.bz2
+        app_folder: sublime-text
+        extracted_directory: sublime_text_3
+    - role: user-apps
+      vars:
+        app_name: Sublime Merge
+        file_checksum: 289218c5a06ad7516477456d7e372d01fc0fbeb5761d239835ef442a11200251
+        file_url: https://download.sublimetext.com/sublime_merge_build_2039_x64.tar.xz
+        filename: sublime_merge_x64.tar.xz
+        app_folder: sublime-merge
+        extracted_directory: sublime_merge
+    - role: user-apps
+      vars:
+        app_name: Postman
+        file_checksum: e9bad384a4c0408ddcbb7492aaf1084f59f0950fe33d33fe77f43f9bf133e674
+        file_url: https://dl.pstmn.io/download/latest/linux64
+        filename: postman-linux-x64.tar.gz
+        app_folder: postman
+        extracted_directory: Postman
+    - role: user-apps
+      vars:
+        app_name: Telegram
+        file_checksum: 939275a84498dedb1a33ac3f0242b0211548ddb087f9801518db92c5d6dc0151
+        file_url: https://telegram.org/dl/desktop/linux
+        filename: tsetup.tar.xz
+        app_folder: telegram
+        extracted_directory: Telegram
+    - role: user-apps
+      vars:
+        app_name: JetBrains Intellij IDEA
+        file_checksum: 06abca33b240b24f447dada437f5ce7387b47644c76378230254d6163882a42a
+        file_url: https://download.jetbrains.com/idea/ideaIC-2020.3.1.tar.gz
+        filename: idea-ic.tar.gz
+        app_folder: jetbrains-intellij-idea
+        extracted_directory: idea-IC-203.6682.168
+    - role: user-apps
+      vars:
+        app_name: JetBrains PyCharm
+        file_checksum: 33e19dfaa434f637506b6fa35dcf94c908f9b471aadc9f616eae0c0395327cfc
+        file_url: https://download.jetbrains.com/python/pycharm-community-2020.3.2.tar.gz
+        filename: pycharm-community.tar.gz
+        app_folder: jetbrains-pycharm
+        extracted_directory: pycharm-community-2020.3.2
+    - role: user-apps
+      vars:
+        app_name: Android Studio
+        file_checksum: 68032184959c54576f119b7c7c8ded175d848374f3954fa450530d78260dd68b
+        file_url: https://redirector.gvt1.com/edgedl/android/studio/ide-zips/4.1.1.0/android-studio-ide-201.6953283-linux.tar.gz
+        filename: android-studio-ide-linux.tar.gz
+        app_folder: android-studio
+        skip_copy: true
+    - role: user-apps
+      vars:
+        app_name: Toggl Track
+        file_checksum: e7ac3e77c0177d851be448c3b74ffbd0dc3c8e6ec2c7738b9d7eb1c1e830fb12
+        file_url: https://toggl-open-source.github.io/toggldesktop/download/linux_tar.gz-stable/
+        filename: toggldesktop_linux_x86_64.tar.gz
+        app_folder: toggl
+        extracted_directory: toggldesktop_linux_x86_64

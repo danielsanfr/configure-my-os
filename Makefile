@@ -46,10 +46,10 @@ graphic-card: .venv
 	echo ""
 	echo "Finish!"
 
-user-only: .venv
-	echo "Installing my OS (with user only apps support)..."
+user-apps: .venv
+	echo "Installing app on user scope..."
 	${SOURCE_VENV}
-	ansible-playbook user-only-playbook.yml
+	ansible-playbook user-apps-playbook.yml
 	echo ""
 	echo "####################################################################################################"
 	echo ""
