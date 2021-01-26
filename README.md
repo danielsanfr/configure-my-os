@@ -28,6 +28,12 @@ make
 
 - make
 
+## Manual Step
+
+> _Reference: https://askubuntu.com/questions/477821/how-can-i-permanently-remove-the-boot-option-quiet-splash_
+
+Edit GRUB config to show console output.
+
 ## Archive
 
 - [Ubuntu](archive/ubuntu)
