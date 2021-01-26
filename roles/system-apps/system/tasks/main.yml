@@ -40,6 +40,7 @@
       - virtualbox-guest-iso
       - hardinfo
       - font-manager
+      - qt5ct
 
 - name: Install system AUR packages
   become_user: "{{ current_user }}"
