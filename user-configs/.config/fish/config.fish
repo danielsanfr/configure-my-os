@@ -13,6 +13,9 @@ set PATH ~/.gem/ruby/2.7.0/bin/ $PATH
 
 set PATH_TO_FX ~/.local/sdks/javafx/11/lib/
 
+# Fish Shell
+set fish_greeting
+
 # Spacefish
 set SPACEFISH_TIME_SHOW true
 
