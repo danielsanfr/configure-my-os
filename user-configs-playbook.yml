@@ -38,3 +38,4 @@
         - { key: "/org/gnome/mutter/overlay-key", value: "'Super_R'" }
         - { key: "/org/gnome/desktop/wm/keybindings/switch-input-source", value: "['']" }
         - { key: "/org/gnome/desktop/wm/keybindings/switch-input-source-backward", value: "['']" }
+        - { key: "/org/gnome/shell/app-switcher/current-workspace-only", value: "true" } # If I use "True" ansible does not works?!
