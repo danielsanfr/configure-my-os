@@ -3,6 +3,7 @@
     state: present
     name:
       - gwe
+      - s-tui
 
 - name: Install graphics AUR packages
   become_user: "{{ current_user }}"

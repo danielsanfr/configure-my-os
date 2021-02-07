@@ -36,6 +36,7 @@
       - tilix
       - cpu-x
       - psensor
+      - xsensors
       - virtualbox
       - virtualbox-guest-iso
       - hardinfo
