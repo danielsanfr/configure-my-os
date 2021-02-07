@@ -30,9 +30,8 @@ make
 
 ## Manual Step
 
-> _Reference: https://askubuntu.com/questions/477821/how-can-i-permanently-remove-the-boot-option-quiet-splash_
-
-Edit GRUB config to show console output.
+- [Edit GRUB config to show console output.](https://askubuntu.com/questions/477821/how-can-i-permanently-remove-the-boot-option-quiet-splash_)
+- [Edit sudoers to show asterisks when type the password on the terminal.](https://www.howtogeek.com/194010/how-to-make-password-asterisks-visible-in-the-terminal-window-in-linux/)
 
 ## Archive
 
