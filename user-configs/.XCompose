@@ -1,0 +1,5 @@
+# https://gitlab.gnome.org/GNOME/gtk/-/issues/3807
+
+<dead_acute> <space> : "'"
+<dead_acute> <dead_acute> : "´"
+<dead_acute> <c> : "ç"

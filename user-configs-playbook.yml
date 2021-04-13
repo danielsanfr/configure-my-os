@@ -19,6 +19,7 @@
       with_items:
         - .gitconfig
         - .nanorc
+        - .XCompose
         - .ssh/config
         - .gnupg/gpg-agent.conf
         - .config/fish/config.fish
