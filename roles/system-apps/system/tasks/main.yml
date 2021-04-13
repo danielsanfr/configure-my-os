@@ -34,14 +34,16 @@
       - gnome-tweaks
       - plank
       - tilix
+      - virtualbox
+      - virtualbox-guest-iso
+      - font-manager
+      - qt5ct
       - cpu-x
       - psensor
       - xsensors
-      - virtualbox
-      - virtualbox-guest-iso
       - hardinfo
-      - font-manager
-      - qt5ct
+      - gsmartcontrol
+      - nvme-cli
 
 - name: Install system AUR packages
   become_user: "{{ current_user }}"
