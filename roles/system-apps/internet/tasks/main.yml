@@ -17,6 +17,13 @@
       - gnome-user-share
       - rygel
 
+- name: File synchronization
+  community.general.pacman:
+    state: present
+    name:
+      - syncthing-gtk
+      - grsync
+
 - name: Others
   community.general.pacman:
     state: present
