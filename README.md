@@ -32,6 +32,7 @@ make
 
 - [Edit GRUB config to show console output.](https://askubuntu.com/questions/477821/how-can-i-permanently-remove-the-boot-option-quiet-splash_)
 - [Edit sudoers to show asterisks when type the password on the terminal.](https://www.howtogeek.com/194010/how-to-make-password-asterisks-visible-in-the-terminal-window-in-linux/)
+- [Grub no reconoce mi partición Windows tras instalar linux-lqx 5.11.x](https://forum.manjaro.org/t/grub-no-reconoce-mi-particion-windows-tras-instalar-linux-lqx-5-11-x/56685/6)
 
 ## Archive
 
