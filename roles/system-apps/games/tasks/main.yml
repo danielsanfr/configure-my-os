@@ -3,7 +3,6 @@
     state: present
     name:
       - gnome-2048
-      - gnome-chess
       - gnome-mines
       - gnome-sudoku
       - gnome-games
