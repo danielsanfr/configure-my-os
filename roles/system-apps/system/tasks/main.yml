@@ -22,6 +22,11 @@
       - asciinema
       - progress
       - thefuck
+      - downgrade
+      - htop
+      - bashtop
+      - tmux
+      - ncdu
 
 - name: Others
   community.general.pacman:
@@ -32,6 +37,7 @@
       - gnome-system-log
       - gnome-usage
       - gnome-tweaks
+      - dconf-editor
       - plank
       - tilix
       - virtualbox

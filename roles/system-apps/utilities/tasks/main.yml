@@ -6,6 +6,9 @@
       - gnome-todo
       - gnome-notes
       - gnome-passwordsafe
+      - gnome-weather
+      - gnome-calendar
+      - gnome-clocks
       - gedit
       - gedit-plugins
       - catfish
