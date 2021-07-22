@@ -42,3 +42,4 @@
         - { key: "/org/gnome/shell/app-switcher/current-workspace-only", value: "true" } # If I use "True" ansible does not works?!
         - { key: "/org/gnome/desktop/wm/preferences/mouse-button-modifier", value: "'<Alt>'" }
         - { key: "/org/gnome/desktop/sound/event-sounds", value: "false" }
+        - { key: "/org/gnome/desktop/peripherals/touchpad/send-events", value: "'disabled-on-external-mouse'" }
