@@ -10,3 +10,5 @@
       - snes9x-gtk
       - lutris
       - steam-manjaro
+      - linuxconsole
+      - evtest
