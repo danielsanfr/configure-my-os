@@ -13,6 +13,8 @@
     state: present
     name:
       - gst
+      - gpu-viewer
+      - openrgb-bin
 
 - debug:
     msg: Installing Nvidia driver...
