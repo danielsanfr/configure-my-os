@@ -4,6 +4,7 @@
     name:
       - vym
       - minder
+      - pdfarranger
 
 - name: Install office AUR packages
   become_user: "{{ current_user }}"
