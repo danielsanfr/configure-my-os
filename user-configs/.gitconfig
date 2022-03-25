@@ -1,3 +1,5 @@
+[init]
+    defaultBranch = master
 [user]
     name = Daniel San
     email = daniel.samrocha@gmail.com
