@@ -9,7 +9,7 @@
 [gui]
     editor = subl
 [core]
-    editor = nano
+    editor = /usr/bin/re.sonny.Commit
     # pager = less -+$LESS -R
     pager = delta --width 160 | less -+$LESS -R
 [interactive]
