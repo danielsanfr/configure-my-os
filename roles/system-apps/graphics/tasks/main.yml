@@ -6,6 +6,7 @@
       - flameshot
       - gimp
       - gthumb
+      - nomacs
       - peek
       - eog
       - eog-plugins
@@ -19,3 +20,4 @@
    name:
      - curtail
      - gromit-mpx
+     - identity

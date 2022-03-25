@@ -14,7 +14,9 @@
       - fish
       - lsd
       - bat
+      - exa
       - httpie
+      - xh
       - tree
       - yay
       - git
@@ -25,6 +27,8 @@
       - downgrade
       - htop
       - bashtop
+      - btop
+      - bpytop
       - tmux
       - ncdu
 
@@ -38,6 +42,7 @@
       - gnome-usage
       - gnome-tweaks
       - dconf-editor
+      - indicator-sensors
       - plank
       - tilix
       - virtualbox
@@ -45,6 +50,7 @@
       - font-manager
       - qt5ct
       - cpu-x
+      - piper
       - psensor
       - xsensors
       - hardinfo
@@ -62,3 +68,5 @@
       - ulauncher
       - git-delta-bin
       - duf-bin
+      - system-monitoring-center
+      - pika-backup

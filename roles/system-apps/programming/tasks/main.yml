@@ -61,3 +61,5 @@
       - lazydocker
       - valentina-studio
       - robo3t-bin
+      - python-gaphor
+      - commit

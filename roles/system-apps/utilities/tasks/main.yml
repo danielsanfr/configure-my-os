@@ -17,3 +17,13 @@
       - keepassxc
       - alacarte
       - android-file-transfer
+      - seahorse
+
+- name: Install utilities AUR packages
+  become_user: "{{ current_user }}"
+  aur:
+    use: yay
+    extra_args: --removemake
+    state: present
+    name:
+      - decoder

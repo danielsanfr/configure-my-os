@@ -1,3 +1,9 @@
+- name: Remove Gestures
+  community.general.pacman:
+    state: absent
+    name:
+      - gestures
+
 - name: Remove stoken
   community.general.pacman:
     state: absent

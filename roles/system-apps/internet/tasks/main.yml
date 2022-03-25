@@ -37,6 +37,8 @@
       - wireshark-qt
       - gnome-maps
       - epiphany
+      - nitroshare
+      - newsflash
 
 - name: Install internet AUR packages
   become_user: "{{ current_user }}"
@@ -48,3 +50,4 @@
       - dropbox
       - nautilus-dropbox
       - slack-desktop
+      - junction

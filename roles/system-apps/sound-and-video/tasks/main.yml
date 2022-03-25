@@ -9,6 +9,11 @@
       - simplescreenrecorder
       - gnome-sound-recorder
       - vlc
+      - pavucontrol
+      - kooha
+      - audacious
+      - handbrake
+      - vidcutter
 
 - name: Install sound & video AUR packages
   become_user: "{{ current_user }}"
@@ -19,3 +24,5 @@
     name:
       - spotify
       - blanket-bin
+      - mousai
+      - video-trimmer

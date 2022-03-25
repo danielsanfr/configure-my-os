@@ -15,6 +15,7 @@
       - gst
       - gpu-viewer
       - openrgb-bin
+      - mangohud
 
 - debug:
     msg: Installing Nvidia driver...
