@@ -17,9 +17,7 @@
     state: absent
     name:
       - manjaro-gnome-assets
-      - kvantum-theme-matchama
-      - kvantum-qt5
-      - kwindowsystem
+      - kvantum-theme-matchama kvantum kvantum-qt5
 
 - name: Remove ranger
   community.general.pacman:
@@ -43,8 +41,7 @@
       - gnome-layout-switcher
       - dynamic-wallpaper-editor
       - manjaro-dynamic-wallpaper
-      - manjaro-gnome-tour
-      - manjaro-hello
+      - manjaro-hello manjaro-gnome-tour
 
 - name: Remove gnome-shell extensions
   community.general.pacman:
