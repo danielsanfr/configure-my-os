@@ -45,17 +45,19 @@
       - indicator-sensors
       - plank
       - tilix
+      - alacritty
       - virtualbox
       - virtualbox-guest-iso
       - font-manager
       - qt5ct
-      - cpu-x
       - piper
       - psensor
       - xsensors
       - hardinfo
       - gsmartcontrol
       - nvme-cli
+      - git-delta
+      - duf
 
 - name: Install system AUR packages
   become_user: "{{ current_user }}"
@@ -64,9 +66,7 @@
     extra_args: --removemake
     state: present
     name:
-      - alacritty
       - ulauncher
-      - git-delta-bin
-      - duf-bin
+      - cpu-x
       - system-monitoring-center
       - pika-backup

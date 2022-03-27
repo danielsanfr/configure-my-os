@@ -14,6 +14,7 @@
       - audacious
       - handbrake
       - vidcutter
+      - blanket
 
 - name: Install sound & video AUR packages
   become_user: "{{ current_user }}"
@@ -23,6 +24,5 @@
     state: present
     name:
       - spotify
-      - blanket-bin
       - mousai
       - video-trimmer

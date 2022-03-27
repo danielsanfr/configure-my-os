@@ -21,7 +21,6 @@
   community.general.pacman:
     state: present
     name:
-      - syncthing-gtk
       - grsync
 
 - name: Others
@@ -33,7 +32,6 @@
       - fractal
       - fragments
       - uget
-      - ipscan
       - wireshark-qt
       - gnome-maps
       - epiphany
@@ -50,4 +48,6 @@
       - dropbox
       - nautilus-dropbox
       - slack-desktop
+      - syncthing-gtk-python3
+      - ipscan
       - junction

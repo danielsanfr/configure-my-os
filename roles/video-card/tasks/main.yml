@@ -2,7 +2,6 @@
   community.general.pacman:
     state: present
     name:
-      - gwe
       - s-tui
 
 - name: Install graphics AUR packages
@@ -12,6 +11,7 @@
     extra_args: --removemake
     state: present
     name:
+      - gwe
       - gst
       - gpu-viewer
       - openrgb-bin
