@@ -5,73 +5,72 @@
   roles:
     - roles/user-apps/vscode
     - role: roles/user-apps/android
-      file_checksum: 87f6dcf41d4e642e37ba03cb2e387a542aa0bd73cb689a9e7152aad40a6e7a08
-      file_url: https://dl.google.com/android/repository/commandlinetools-linux-6858069_latest.zip
+      file_checksum: d71f75333d79c9c6ef5c39d3456c6c58c613de30e6a751ea0dbd433e8f8b9cbf
+      file_url: https://dl.google.com/android/repository/commandlinetools-linux-8092744_latest.zip
       filename: android-commandlinetools-linux.zip
     - role: user-apps
       app_name: yEd
-      file_checksum: f1b8c878e45d476fd99e950c3469e7d7d9b433dab4efad8c1f8938dec9e2d897
-      file_url: https://www.yworks.com/resources/yed/demo/yEd-3.20.1.zip
+      file_checksum: c4301c2d7e842bdb781b6a112c74e1244d1b80eb0eeb8a0a30e1bfba83ef09e4
+      file_url: https://www.yworks.com/resources/yed/demo/yEd-3.21.1.zip
       filename: yed.zip
       app_folder: yed
-      extracted_directory: yed-3.20.1
+      extracted_directory: yed-3.21.1
     - role: user-apps
       app_name: Sublime Text
-      file_checksum: 0b3c8ca5e6df376c3c24a4b9ac2e3b391333f73b229bc6e87d0b4a5f636d74ee
-      file_url: https://download.sublimetext.com/sublime_text_3_build_3211_x64.tar.bz2
-      filename: sublime_text_3_x64.tar.bz2
+      file_checksum: 5c64e534cce0032e54d3c7028e8d6b3bdef28f3fd28a26244a360a2ce75450a1
+      file_url: https://download.sublimetext.com/sublime_text_build_4126_x64.tar.xz
+      filename: sublime_text_x64.tar.bz2
       app_folder: sublime-text
-      extracted_directory: sublime_text_3
+      extracted_directory: sublime_text
     - role: user-apps
       app_name: Sublime Merge
-      file_checksum: 289218c5a06ad7516477456d7e372d01fc0fbeb5761d239835ef442a11200251
-      file_url: https://download.sublimetext.com/sublime_merge_build_2039_x64.tar.xz
+      file_checksum: 0ac7994208eaafc07ae9295fff215966c9d115cdf3a8218a140cd274c45074d2
+      file_url: https://download.sublimetext.com/sublime_merge_build_2068_x64.tar.xz
       filename: sublime_merge_x64.tar.xz
       app_folder: sublime-merge
       extracted_directory: sublime_merge
     - role: user-apps
       app_name: Postman
-      file_checksum: e9bad384a4c0408ddcbb7492aaf1084f59f0950fe33d33fe77f43f9bf133e674
+      file_checksum: 7d5a2ccbd4767055ca11806039255a456293131da0417bc7b7335646b7b56a5f
       file_url: https://dl.pstmn.io/download/latest/linux64
       filename: postman-linux-x64.tar.gz
       app_folder: postman
       extracted_directory: Postman
     - role: user-apps
       app_name: Telegram
-      file_checksum: 939275a84498dedb1a33ac3f0242b0211548ddb087f9801518db92c5d6dc0151
+      file_checksum: a2a77622d205520826d4f585cf68d332d82fed53c4b12f6b6cb36dfbf5ccd5f8
       file_url: https://telegram.org/dl/desktop/linux
       filename: tsetup.tar.xz
       app_folder: telegram
       extracted_directory: Telegram
     - role: user-apps
       app_name: JetBrains Intellij IDEA
-      file_checksum: 06abca33b240b24f447dada437f5ce7387b47644c76378230254d6163882a42a
-      file_url: https://download.jetbrains.com/idea/ideaIC-2020.3.1.tar.gz
+      file_checksum: 38ba4721d459efc55b83bbffdcd3888b2eb9d98ef3226967fb05ffc5fbcc96e5
+      file_url: https://download.jetbrains.com/idea/ideaIC-2021.3.3.tar.gz
       filename: idea-ic.tar.gz
       app_folder: jetbrains-intellij-idea
-      extracted_directory: idea-IC-203.6682.168
+      extracted_directory: idea-IC-213.7172.25
     - role: user-apps
       app_name: JetBrains PyCharm
-      file_checksum: 33e19dfaa434f637506b6fa35dcf94c908f9b471aadc9f616eae0c0395327cfc
-      file_url: https://download.jetbrains.com/python/pycharm-community-2020.3.2.tar.gz
+      file_checksum: 06ef4152d59b97da1186cdf288588d20d69a689fe75b2140130fa5d8326d07ad
+      file_url: https://download.jetbrains.com/python/pycharm-community-2021.3.3.tar.gz
       filename: pycharm-community.tar.gz
       app_folder: jetbrains-pycharm
-      extracted_directory: pycharm-community-2020.3.2
+      extracted_directory: pycharm-community-2021.3.3
     - role: user-apps
       app_name: Android Studio
-      file_checksum: 68032184959c54576f119b7c7c8ded175d848374f3954fa450530d78260dd68b
-      file_url: https://redirector.gvt1.com/edgedl/android/studio/ide-zips/4.1.1.0/android-studio-ide-201.6953283-linux.tar.gz
+      file_checksum: a9a5eaffe1873c684b99786db482d3b11fcbc003a773634f8e740c7bca148539
+      file_url: https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2021.1.1.22/android-studio-2021.1.1.22-linux.tar.gz
       filename: android-studio-ide-linux.tar.gz
       app_folder: android-studio
       skip_copy: true
     - role: user-apps
       app_name: Toggl Track
-      file_checksum: e7ac3e77c0177d851be448c3b74ffbd0dc3c8e6ec2c7738b9d7eb1c1e830fb12
-      file_url: https://github.com/toggl-open-source/toggldesktop/releases/download/v7.5.324/toggldesktop_linux_7.5.324_x86_64.tar.gz
+      file_checksum: bad78d8f8612af0ee08bf059fc16dd2c047e57754bf30e1224d1950015d8b259
+      file_url: https://github.com/toggl-open-source/toggldesktop/releases/download/v7.5.410/toggldesktop_linux_7.5.410_x86_64.tar.gz
       filename: toggldesktop_linux_x86_64.tar.gz
       app_folder: toggl
-      extract_to: toggl
-      skip_copy: true
+      extracted_directory: toggldesktop
   tasks:
     - name: "User apps : Copy desktop entries"
       copy:
