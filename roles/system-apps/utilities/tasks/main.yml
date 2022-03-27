@@ -18,6 +18,7 @@
       - alacarte
       - android-file-transfer
       - seahorse
+      - touche
 
 - name: Install utilities AUR packages
   become_user: "{{ current_user }}"
