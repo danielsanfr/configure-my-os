@@ -27,9 +27,14 @@
     path: ~/.local/applications/VSCode-linux-x64
   register: vscode_extracted
 
+- name: "VS Code : Create app directory"
+  file:
+    path: ~/.local/applications/vscode
+    state: directory
+
 # https://stackoverflow.com/questions/8488253/how-to-force-cp-to-overwrite-without-confirmation
 - name: "VS Code : Rename directory"
-  shell: \cp -rafu ~/.local/applications/VSCode-linux-x64/* ~/.local/applications/vscode
+  shell: \cp -rafu ~/.local/applications/VSCode-linux-x64/* ~/.local/applications/vscode/
   when: vscode_extracted.stat.exists
 
 - name: "VS Code : Create sha256hash.txt"
