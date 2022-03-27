@@ -51,6 +51,7 @@
       - virtualbox-guest-iso
       - font-manager
       - qt5ct
+      - qt6ct
       - piper
       - psensor
       - xsensors
