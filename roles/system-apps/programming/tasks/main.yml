@@ -11,12 +11,13 @@
     name:
       - neovim
 
-- name: Docker
+- name: Podman
   community.general.pacman:
     state: present
     name:
-      - docker
-      - docker-compose
+      - podman
+      - podman-compose
+      - podman-docker
 
 - name: Data browsers
   community.general.pacman:
