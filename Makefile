@@ -86,25 +86,28 @@ user-configs: .venv
 
 ssh-and-gpg:
 	echo "Configuring SSH and GPG keys..."
-	echo "Before continue, put the SSH keys to the \"~/.ssh\" directory"
+	echo "Before continue, put the SSH keys to the \"~/.ssh\" directory or"
+	echo "or create keys using the following command: ssh-keygen -t ed25519 -C \"your_email@example.com\""
 	echo "and GPG keys to \"./gpg-keys\"."
 	${WAIT_ENTER_KEY}
 
 	echo "Configuring SSH keys..."
 	echo "Enter the password for the \"personal\" SSH key (2 times)"
-	ssh-add "${HOME}/.ssh/id_rsa_personal"
+	ssh-add "${HOME}/.ssh/id_ed2_personal"
 	# Automatic unlock using gnome keyring (seahorse)
-	secret-tool store --label="Unlock password for: daniel.samrocha@gmail.com" "unique" "ssh-store:${HOME}/.ssh/id_rsa_personal"
+	secret-tool store --label="Unlock password for: daniel.samrocha@gmail.com" "unique" "ssh-store:${HOME}/.ssh/id_ed2_personal"
 
 	echo "Enter the password for the \"vago\" SSH key (2 times)"
-	ssh-add "${HOME}/.ssh/id_rsa_vago"
-	secret-tool store --label="Unlock password for: danielsan@vago.online" "unique" "ssh-store:${HOME}/.ssh/id_rsa_vago"
+	ssh-add "${HOME}/.ssh/id_ed2_vago"
+	secret-tool store --label="Unlock password for: danielsan@vago.online" "unique" "ssh-store:${HOME}/.ssh/id_ed2_vago"
 
 	echo "Configuring GPG keys..."
 	echo "Enter the password for the \"daniel.samrocha@gmail.com\" GPG key (2 times)"
+	${WAIT_ENTER_KEY}
+	mkdir -p ${TMP_DIR}
 	touch ${GPG_FILE_TO_SIGN}
-	gpg --import gpg-keys/gpg_pri_daniel-samrocha@gmail-com.asc
-	gpg --import gpg-keys/gpg_pub_daniel-samrocha@gmail-com.asc
+	gpg --import ~/.gpg-keys/gpg_pri_daniel-samrocha@gmail-com.asc
+	gpg --import ~/.gpg-keys/gpg_pub_daniel-samrocha@gmail-com.asc
 	echo "You will be directed to the GPG CLI, please, enter \"trust\" and select the option 5 (I trust ultimaly). So, press q to quit."
 	gpg --edit-key daniel.samrocha@gmail.com
 	echo "When the dialog appears, enter the password and check the option to save the password."
@@ -113,8 +116,9 @@ ssh-and-gpg:
 	rm ${GPG_FILE_TO_SIGN}.gpg
 
 	echo "Enter the password for the \"danielsan@vago.online\" GPG key (2 times)"
-	gpg --import gpg-keys/gpg_pri_danielsan@vago-online.asc
-	gpg --import gpg-keys/gpg_pub_danielsan@vago-online.asc
+	${WAIT_ENTER_KEY}
+	gpg --import ~/.gpg-keys/gpg_pri_danielsan@vago-online.asc
+	gpg --import ~/.gpg-keys/gpg_pub_danielsan@vago-online.asc
 	echo "You will be directed to the GPG CLI, please, enter \"trust\" and select the option 5 (I trust ultimaly). So, press q to quit."
 	gpg --edit-key danielsan@vago.online
 	echo "When the dialog appears, enter the password and check the option to save the password."
