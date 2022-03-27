@@ -4,5 +4,4 @@
   vars:
     current_user: "{{ lookup('env', 'USER') }}"
   roles:
-    - kewlfft.aur
     - video-card

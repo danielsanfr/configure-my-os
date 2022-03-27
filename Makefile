@@ -17,7 +17,7 @@ WAIT_ENTER_KEY=read -p "Press Enter to continue..."
 	${SOURCE_VENV}
 	pip install --upgrade pip -q
 	pip install -r requirements.txt -q
-	ansible-galaxy install kewlfft.aur
+	ansible-galaxy collection install kewlfft.aur
 
 help:
 	echo "####################################### Configure my os help #######################################"

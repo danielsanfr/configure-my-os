@@ -18,7 +18,7 @@
 
 - name: Install sound & video AUR packages
   become_user: "{{ current_user }}"
-  aur:
+  kewlfft.aur.aur:
     use: yay
     extra_args: --removemake
     state: present
