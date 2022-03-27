@@ -54,7 +54,6 @@
       - piper
       - psensor
       - xsensors
-      - hardinfo
       - gsmartcontrol
       - nvme-cli
       - git-delta
