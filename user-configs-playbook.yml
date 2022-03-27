@@ -1,6 +1,18 @@
 ---
 - hosts: localhost
   tasks:
+    - name: "User configs : Create workspaces directories"
+      file:
+        path: "~/workspaces/{{ item }}"
+        state: directory
+      with_items:
+        - android/
+        - qt/
+        - others/
+        - kotlin/
+        - python/
+        - typescript/
+        - containers/
     - name: "User configs : Create configuration directories"
       file:
         path: "~/{{ item }}"
