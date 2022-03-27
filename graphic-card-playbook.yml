@@ -1,6 +1,4 @@
 ---
-- import_playbook: core-playbook.yml
-
 - hosts: localhost
   become: yes
   vars:
