@@ -61,3 +61,20 @@
         - { key: "/org/gnome/shell/app-switcher/current-workspace-only", value: "true" } # If I use "True" ansible does not works?!
         - { key: "/org/gnome/desktop/sound/event-sounds", value: "false" }
         - { key: "/org/gnome/desktop/peripherals/touchpad/send-events", value: "'disabled-on-external-mouse'" }
+    - name: "User configs : dconf : Shortcuts"
+      community.general.dconf:
+        key: "{{ item.key }}"
+        value: "{{ item.value }}"
+        state: present
+      with_items:
+        - { key: "/org/gnome/desktop/wm/keybindings/move-to-workspace-right", value: "['<Primary><Shift><Alt>Right']" }
+        - { key: "/org/gnome/desktop/wm/keybindings/move-to-workspace-left", value: "['<Primary><Shift><Alt>Left']" }
+        - { key: "/org/gnome/desktop/wm/keybindings/close", value: "['<Alt>F4']" }
+        - { key: "/org/gnome/desktop/wm/keybindings/switch-to-workspace-right", value: "['<Primary><Alt>Right']" }
+        - { key: "/org/gnome/desktop/wm/keybindings/switch-to-workspace-left", value: "['<Primary><Alt>Left']" }
+        - { key: "/org/gnome/desktop/wm/keybindings/move-to-workspace-left", value: "['<Primary><Shift><Alt>Left']" }
+        - { key: "/org/gnome/desktop/wm/keybindings/move-to-workspace-left", value: "['<Primary><Shift><Alt>Left']" }
+        - { key: "/org/gnome/desktop/wm/keybindings/move-to-workspace-left", value: "['<Primary><Shift><Alt>Left']" }
+        - { key: "/org/gnome/desktop/wm/keybindings/move-to-workspace-left", value: "['<Primary><Shift><Alt>Left']" }
+        - { key: "/org/gnome/desktop/wm/keybindings/move-to-workspace-left", value: "['<Primary><Shift><Alt>Left']" }
+        - { key: "/org/gnome/desktop/wm/keybindings/move-to-workspace-left", value: "['<Primary><Shift><Alt>Left']" }
