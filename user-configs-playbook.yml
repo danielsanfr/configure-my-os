@@ -51,7 +51,13 @@
         - { key: "/org/gnome/mutter/overlay-key", value: "'Super_R'" }
         - { key: "/org/gnome/desktop/wm/keybindings/switch-input-source", value: "['']" }
         - { key: "/org/gnome/desktop/wm/keybindings/switch-input-source-backward", value: "['']" }
-        - { key: "/org/gnome/shell/app-switcher/current-workspace-only", value: "true" } # If I use "True" ansible does not works?!
         - { key: "/org/gnome/desktop/wm/preferences/mouse-button-modifier", value: "'<Alt>'" }
+    - name: "User configs : dconf : System settings"
+      community.general.dconf:
+        key: "{{ item.key }}"
+        value: "{{ item.value }}"
+        state: present
+      with_items:
+        - { key: "/org/gnome/shell/app-switcher/current-workspace-only", value: "true" } # If I use "True" ansible does not works?!
         - { key: "/org/gnome/desktop/sound/event-sounds", value: "false" }
         - { key: "/org/gnome/desktop/peripherals/touchpad/send-events", value: "'disabled-on-external-mouse'" }
