@@ -13,6 +13,8 @@
         - python/
         - typescript/
         - containers/
+        - embedded/
+        - shellscript/
     - name: "User configs : Create configuration directories"
       file:
         path: "~/{{ item }}"
