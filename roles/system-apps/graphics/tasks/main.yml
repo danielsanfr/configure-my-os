@@ -6,10 +6,10 @@
       - flameshot
       - gimp
       - gthumb
-      - nomacs
       - peek
       - eog
       - eog-plugins
+      - curtail
 
 - name: Install graphics AUR packages
   become_user: "{{ current_user }}"
@@ -18,6 +18,6 @@
     extra_args: --removemake
     state: present
     name:
-      - curtail
       - gromit-mpx
       - identity
+      - nomacs
