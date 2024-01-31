@@ -28,7 +28,7 @@
     state: present
     name:
       - firefox
-      - chromium
+      - opera
       - fractal
       - fragments
       - uget
