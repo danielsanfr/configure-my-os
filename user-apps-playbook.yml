@@ -64,13 +64,6 @@
       filename: android-studio-ide-linux.tar.gz
       app_folder: android-studio
       skip_copy: true
-    - role: user-apps
-      app_name: Toggl Track
-      file_checksum: bad78d8f8612af0ee08bf059fc16dd2c047e57754bf30e1224d1950015d8b259
-      file_url: https://github.com/toggl-open-source/toggldesktop/releases/download/v7.5.410/toggldesktop_linux_7.5.410_x86_64.tar.gz
-      filename: toggldesktop_linux_x86_64.tar.gz
-      app_folder: toggl
-      extracted_directory: toggldesktop
   tasks:
     - name: "User apps : Copy desktop entries"
       copy:
@@ -90,7 +83,6 @@
         - { src: postman/Postman, dest: postman }
         - { src: sublime-merge/sublime_merge, dest: smerge }
         - { src: sublime-text/sublime_text, dest: subl }
-        - { src: toggl/TogglDesktop.sh, dest: toggl }
         - { src: vscode/bin/code, dest: code }
     - name: "User apps : Create links for user apps on local bin directory"
       copy:
