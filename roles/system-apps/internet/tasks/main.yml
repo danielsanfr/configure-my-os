@@ -48,6 +48,6 @@
       - dropbox
       - nautilus-dropbox
       - slack-desktop
-      - syncthing-gtk-python3
+      - syncthing-gtk
       - ipscan
       - junction
