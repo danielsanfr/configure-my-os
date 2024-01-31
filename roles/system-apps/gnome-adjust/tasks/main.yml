@@ -12,7 +12,7 @@
       - python-nautilus
       - nautilus
       - libnautilus-extension
-  when: pacman_check.stderr.find("was not found") != -1
+  when: pacman_check.stderr.find("was not found") != -1 or pacman_check.stderr.find("não foi encontrado") != -1
 
 - name: Install nautilus-typeahead
   community.general.pacman:
