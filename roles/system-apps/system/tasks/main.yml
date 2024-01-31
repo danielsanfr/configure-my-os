@@ -46,7 +46,7 @@
       - ibus-typing-booster
       - gnome-console
       - gnome-firmware
-      - gnome-system-log
+      - gnome-logs
       - gnome-usage
       - gnome-tweaks
       - dconf-editor
