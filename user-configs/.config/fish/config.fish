@@ -13,12 +13,6 @@ set PATH ~/.gem/ruby/2.7.0/bin/ $PATH
 
 set PATH_TO_FX ~/.local/sdks/javafx/11/lib/
 
-# Fish Shell
-set fish_greeting
-
-# Spacefish
-set SPACEFISH_TIME_SHOW true
-
 alias ls "lsd"
 
 thefuck --alias | source
@@ -27,3 +21,9 @@ set -x PAGER "less -RF"
 set -x BAT_PAGER "less -RF"
 
 set -x GPG_TTY (tty)
+
+# Fish Shell
+set fish_greeting
+
+# Starship
+starship init fish | source

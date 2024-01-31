@@ -36,6 +36,7 @@
         - .XCompose
         - .ssh/config
         - .gnupg/gpg-agent.conf
+        - .config/starship.toml
         - .config/fish/config.fish
         - .config/gtk-3.0/gtk.css
         - .config/tilix/schemes/Dracula.json
@@ -80,3 +81,9 @@
         - { key: "/org/gnome/desktop/wm/keybindings/move-to-workspace-left", value: "['<Primary><Shift><Alt>Left']" }
         - { key: "/org/gnome/desktop/wm/keybindings/move-to-workspace-left", value: "['<Primary><Shift><Alt>Left']" }
         - { key: "/org/gnome/desktop/wm/keybindings/move-to-workspace-left", value: "['<Primary><Shift><Alt>Left']" }
+    - name: "User configs : Install Starship : Download"
+      get_url:
+        url: "https://starship.rs/install.sh"
+        dest: "~/Downloads/ansible/starship-install.sh"
+    - name: "User configs : Install Starship : Run script"
+      script: ~/Downloads/ansible/starship-install.sh --bin-dir ~/.local/bin/ --yes

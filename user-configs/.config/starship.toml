@@ -1,0 +1,5 @@
+[sudo]
+disabled = false
+
+[time]
+disabled = false
