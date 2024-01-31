@@ -85,19 +85,19 @@ user-configs: .venv
 ssh-and-gpg:
 	echo "Configuring SSH and GPG keys..."
 	echo "Before continue, put the SSH keys to the \"~/.ssh\" directory or"
-	echo "or create keys using the following command: ssh-keygen -t ed25519 -C \"your_email@example.com\""
+	echo "create keys using the following command: ssh-keygen -t ed25519 -C \"your_email@example.com\""
 	echo "and GPG keys to \"./gpg-keys\"."
 	${WAIT_ENTER_KEY}
 
 	echo "Configuring SSH keys..."
 	echo "Enter the password for the \"personal\" SSH key (2 times)"
-	ssh-add "${HOME}/.ssh/id_ed2_personal"
+	ssh-add "${HOME}/.ssh/id_ed25519_personal"
 	# Automatic unlock using gnome keyring (seahorse)
-	secret-tool store --label="Unlock password for: daniel.samrocha@gmail.com" "unique" "ssh-store:${HOME}/.ssh/id_ed2_personal"
+	secret-tool store --label="Unlock password for: daniel.samrocha@gmail.com" "unique" "ssh-store:${HOME}/.ssh/id_ed25519_personal"
 
 	echo "Enter the password for the \"vago\" SSH key (2 times)"
-	ssh-add "${HOME}/.ssh/id_ed2_vago"
-	secret-tool store --label="Unlock password for: danielsan@vago.online" "unique" "ssh-store:${HOME}/.ssh/id_ed2_vago"
+	ssh-add "${HOME}/.ssh/id_ed25519_vago"
+	secret-tool store --label="Unlock password for: danielsan@vago.online" "unique" "ssh-store:${HOME}/.ssh/id_ed25519_vago"
 
 	echo "Configuring GPG keys..."
 	echo "Enter the password for the \"daniel.samrocha@gmail.com\" GPG key (2 times)"
