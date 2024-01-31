@@ -2,7 +2,7 @@
 
 > Set of scripts for configuring my computers.
 
-Throughout my **GNU/Linux** user journey I have used several distributions and desktop environments (_DE_). I am currently using [Manjaro Gnome](https://manjaro.org/download/#gnome) as the operating system.
+Throughout my **GNU/Linux** user journey I have used several distributions and desktop environments (_DE_). I am currently using [Manjaro Gnome](https://manjaro.org/download/#gnome) as the operating system. The last version of Manjaro where the script worked without problems was **Manjaro Gnome 23.0.4 minimal**.
 
 In every distribution and every _DE_, I always tried to create a script for the repetitive task of reinstalling everything from scratch.
 
