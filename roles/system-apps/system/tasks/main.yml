@@ -50,7 +50,7 @@
       - gnome-usage
       - gnome-tweaks
       - dconf-editor
-      - indicator-sensors
+      # - indicator-sensors
       - plank
       - tilix
       - alacritty
@@ -76,5 +76,5 @@
     name:
       - ulauncher
       - cpu-x
-      - system-monitoring-center
-      - pika-backup
+      # - system-monitoring-center # Project archived :(
+      # - pika-backup
