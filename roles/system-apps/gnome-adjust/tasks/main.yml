@@ -15,7 +15,10 @@
   when: pacman_check.stderr.find("was not found") != -1 or pacman_check.stderr.find("não foi encontrado") != -1
 
 - name: Install nautilus-typeahead
-  community.general.pacman:
+  become_user: "{{ current_user }}"
+  kewlfft.aur.aur:
+    use: yay
+    extra_args: --removemake
     state: present
     name:
       - nautilus-typeahead
