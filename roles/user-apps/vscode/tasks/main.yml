@@ -7,20 +7,25 @@
 
 - name: "VS Code : Create version variable"
   set_fact:
-    vscode_same_version: "{{ vscode_api_result.json.products[14].sha256hash == lookup('file', '~/.local/applications/vscode/sha256hash.txt', errors='ignore') }}"
+    vscode_same_version: "{{ vscode_api_result.json.products[10].sha256hash == lookup('file', '~/.local/applications/vscode/sha256hash.txt', errors='ignore') }}"
 
 - name: "VS Code : Download"
   get_url:
     url: https://code.visualstudio.com/sha/download?build=stable&os=linux-x64
     dest: ~/Downloads/ansible/vscode-stable-x64.tar.gz
-    checksum: "sha256:{{ vscode_api_result.json.products[14].sha256hash }}"
-  when: not vscode_same_version and vscode_api_result.json.products[14].platform.os == 'linux-x64'
+    checksum: "sha256:{{ vscode_api_result.json.products[10].sha256hash }}"
+  when: not vscode_same_version and vscode_api_result.json.products[10].platform.os == 'linux-x64'
+
+- name: "VS Code : Checks if it was downloaded"
+  stat:
+    path: ~/Downloads/ansible/vscode-stable-x64.tar.gz
+  register: vscode_downloaded
 
 - name: "VS Code : Extract"
   unarchive:
     src: ~/Downloads/ansible/vscode-stable-x64.tar.gz
     dest: ~/.local/applications/
-  when: not vscode_same_version
+  when: not vscode_same_version and vscode_downloaded.stat.exists
 
 - name: "VS Code : Checks if it was extracted"
   stat:
