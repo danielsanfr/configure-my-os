@@ -6,7 +6,6 @@
       - cheese
       - lollypop
       - obs-studio
-      - simplescreenrecorder
       - gnome-sound-recorder
       - vlc
       - pavucontrol
@@ -26,3 +25,4 @@
       - spotify
       - mousai
       - video-trimmer
+      - simplescreenrecorder
