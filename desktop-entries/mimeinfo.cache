@@ -3,6 +3,6 @@ inode/directory=visual-studio-code.desktop;
 text/plain=sublime-text.desktop;visual-studio-code.desktop;
 x-scheme-handler/sms=org.gnome.Shell.Extensions.GSConnect.desktop;
 x-scheme-handler/tel=org.gnome.Shell.Extensions.GSConnect.desktop;
-x-scheme-handler/tg=telegram-desktop.desktop;
+x-scheme-handler/tg=telegram.desktop;
 x-scheme-handler/vscode=visual-studio-code-url-handler.desktop;
 x-scheme-handler/vsls=vsls-launcher.desktop;
