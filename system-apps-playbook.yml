@@ -4,6 +4,7 @@
   vars:
     current_user: "{{ lookup('env', 'USER') }}"
   roles:
+    - dependencies
     - manjaro-bloatware
     - roles/system-apps/gnome-adjust
     - roles/system-apps/games

@@ -1,0 +1,8 @@
+- name: Add some base dependencies
+  community.general.pacman:
+    state: present
+    name:
+      - automake
+      - pkgconf
+      - patch
+      - ed
