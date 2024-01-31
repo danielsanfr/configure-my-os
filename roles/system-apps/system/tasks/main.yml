@@ -33,11 +33,18 @@
       - ncdu
       - tldr
 
+- name: Remove Gnome Terminal
+  community.general.pacman:
+    state: absent
+    name:
+      - gnome-terminal
+
 - name: Others
   community.general.pacman:
     state: present
     name:
       - ibus-typing-booster
+      - gnome-console
       - gnome-firmware
       - gnome-system-log
       - gnome-usage
