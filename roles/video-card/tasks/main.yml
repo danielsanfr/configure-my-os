@@ -1,3 +1,10 @@
+- name: Install NVIDIA tools
+  community.general.pacman:
+    state: present
+    name:
+      - nvidia-settings
+      - nvidia-utils
+
 - name: Others
   community.general.pacman:
     state: present
