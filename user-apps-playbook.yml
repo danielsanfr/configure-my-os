@@ -10,57 +10,57 @@
       filename: android-commandlinetools-linux.zip
     - role: user-apps
       app_name: yEd
-      file_checksum: c4301c2d7e842bdb781b6a112c74e1244d1b80eb0eeb8a0a30e1bfba83ef09e4
-      file_url: https://www.yworks.com/resources/yed/demo/yEd-3.21.1.zip
+      file_checksum: 4f96611718df696de2f33eeb2cd78bfbbdacce52390afea8d00441b6fb175e20
+      file_url: https://www.yworks.com/resources/yed/demo/yEd-3.23.2.zip
       filename: yed.zip
       app_folder: yed
-      extracted_directory: yed-3.21.1
+      extracted_directory: yed-3.23.2
     - role: user-apps
       app_name: Sublime Text
-      file_checksum: 5c64e534cce0032e54d3c7028e8d6b3bdef28f3fd28a26244a360a2ce75450a1
-      file_url: https://download.sublimetext.com/sublime_text_build_4126_x64.tar.xz
+      file_checksum: 8e4f70282d1081f8621c36147270e1b26809b013ce5260a4caf41e239e08249e
+      file_url: https://download.sublimetext.com/sublime_text_build_4169_x64.tar.xz
       filename: sublime_text_x64.tar.bz2
       app_folder: sublime-text
       extracted_directory: sublime_text
     - role: user-apps
       app_name: Sublime Merge
-      file_checksum: 0ac7994208eaafc07ae9295fff215966c9d115cdf3a8218a140cd274c45074d2
-      file_url: https://download.sublimetext.com/sublime_merge_build_2068_x64.tar.xz
+      file_checksum: 4f983a807825f711b2b443ac87756e074f08adb0ef32edb8a3fd5e7421a67dde
+      file_url: https://download.sublimetext.com/sublime_merge_build_2091_x64.tar.xz
       filename: sublime_merge_x64.tar.xz
       app_folder: sublime-merge
       extracted_directory: sublime_merge
     - role: user-apps
       app_name: Postman
-      file_checksum: 7d5a2ccbd4767055ca11806039255a456293131da0417bc7b7335646b7b56a5f
+      file_checksum: 48268d6658b6f4cfaa117624bbccf00a86fa10076d83a795975f68a525aaca91
       file_url: https://dl.pstmn.io/download/latest/linux64
       filename: postman-linux-x64.tar.gz
       app_folder: postman
       extracted_directory: Postman
     - role: user-apps
       app_name: Telegram
-      file_checksum: a2a77622d205520826d4f585cf68d332d82fed53c4b12f6b6cb36dfbf5ccd5f8
+      file_checksum: bfc0fbc58d8105c69b767a19db76541ecb81183fc98e516226dcf8ac7d5dd15c
       file_url: https://telegram.org/dl/desktop/linux
       filename: tsetup.tar.xz
       app_folder: telegram
       extracted_directory: Telegram
     - role: user-apps
       app_name: JetBrains Intellij IDEA
-      file_checksum: 38ba4721d459efc55b83bbffdcd3888b2eb9d98ef3226967fb05ffc5fbcc96e5
-      file_url: https://download.jetbrains.com/idea/ideaIC-2021.3.3.tar.gz
+      file_checksum: d252110141046388e728532c5e7a312a6d40d6b75dabb493e88c0e2b8a914574
+      file_url: https://download.jetbrains.com/idea/ideaIC-2023.3.2.tar.gz
       filename: idea-ic.tar.gz
       app_folder: jetbrains-intellij-idea
-      extracted_directory: idea-IC-213.7172.25
+      extracted_directory: idea-IC-233.13135.103
     - role: user-apps
       app_name: JetBrains PyCharm
-      file_checksum: 06ef4152d59b97da1186cdf288588d20d69a689fe75b2140130fa5d8326d07ad
-      file_url: https://download.jetbrains.com/python/pycharm-community-2021.3.3.tar.gz
+      file_checksum: 1a4a95648c68890f2f9eb41cbb9eb041dcd08388c75a91298dfbe73f83a858c8
+      file_url: https://download.jetbrains.com/python/pycharm-community-2023.3.2.tar.gz
       filename: pycharm-community.tar.gz
       app_folder: jetbrains-pycharm
-      extracted_directory: pycharm-community-2021.3.3
+      extracted_directory: pycharm-community-2023.3.2
     - role: user-apps
       app_name: Android Studio
-      file_checksum: a9a5eaffe1873c684b99786db482d3b11fcbc003a773634f8e740c7bca148539
-      file_url: https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2021.1.1.22/android-studio-2021.1.1.22-linux.tar.gz
+      file_checksum: 5c5f97c871a4edd3d304729cc7ddbda9d147bba85125614edfcda68784ae583b
+      file_url: https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2023.1.1.27/android-studio-2023.1.1.27-linux.tar.gz
       filename: android-studio-ide-linux.tar.gz
       app_folder: android-studio
       skip_copy: true
