@@ -10,6 +10,7 @@
   community.general.pacman:
     state: present
     name:
+      - xorg-xkill
       - nano-syntax-highlighting
       - fish
       - lsd
