@@ -22,6 +22,7 @@
       - yay
       - git
       - fzf
+      - zoxide
       - asciinema
       - progress
       - thefuck
