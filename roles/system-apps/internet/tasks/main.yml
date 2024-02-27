@@ -37,6 +37,7 @@
       - epiphany
       - nitroshare
       - newsflash
+      - geary
 
 - name: Install internet AUR packages
   become_user: "{{ current_user }}"
