@@ -51,6 +51,7 @@
       - gnome-usage
       - gnome-tweaks
       - dconf-editor
+      - baobab
       # - indicator-sensors
       - plank
       - tilix
