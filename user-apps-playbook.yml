@@ -31,14 +31,14 @@
       extracted_directory: sublime_merge
     - role: user-apps
       app_name: Postman
-      file_checksum: 48268d6658b6f4cfaa117624bbccf00a86fa10076d83a795975f68a525aaca91
+      file_checksum: 222e927013ee631cb31f6706493b83954146de74b5ad32d31aa5ea55bcf9129a
       file_url: https://dl.pstmn.io/download/latest/linux64
       filename: postman-linux-x64.tar.gz
       app_folder: postman
       extracted_directory: Postman
     - role: user-apps
       app_name: Telegram
-      file_checksum: bfc0fbc58d8105c69b767a19db76541ecb81183fc98e516226dcf8ac7d5dd15c
+      file_checksum: f75239beeab815c9b1dada08e0ff84885fc85bc4919178545fffe7018ddffcc2
       file_url: https://telegram.org/dl/desktop/linux
       filename: tsetup.tar.xz
       app_folder: telegram
