@@ -1,3 +1,10 @@
+- name: Fix to avoid players don't start videos
+  community.general.pacman:
+    state: present
+    name:
+      - libva-intel-driver
+      - libva-nvidia-driver
+
 - name: Others
   community.general.pacman:
     state: present
