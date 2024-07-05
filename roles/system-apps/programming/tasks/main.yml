@@ -18,6 +18,7 @@
       - podman
       - podman-compose
       - podman-docker
+      - aardvark-dns # Corrige problema com DNS: https://bbs.archlinux.org/viewtopic.php?id=290028 , https://bugs.archlinux.org/task/80267
 
 - name: Data browsers
   community.general.pacman:
