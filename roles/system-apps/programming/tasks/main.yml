@@ -38,7 +38,7 @@
   community.general.pacman:
     state: present
     name:
-      - nodejs-lts-hydrogen
+      - nodejs-lts-iron
       - npm
 
 - name: Others
