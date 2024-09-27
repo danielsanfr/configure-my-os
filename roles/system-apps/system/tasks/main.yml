@@ -16,6 +16,7 @@
       - lsd
       - bat
       - exa
+      - dust
       - httpie
       - xh
       - tree
