@@ -35,6 +35,7 @@
       - tmux
       - ncdu
       - tldr
+      - trippy
 
 - name: Remove Gnome Terminal
   community.general.pacman:
