@@ -83,6 +83,7 @@
         - { key: "/org/gnome/desktop/wm/keybindings/move-to-workspace-left", value: "['<Primary><Shift><Alt>Left']" }
         - { key: "/org/gnome/shell/keybindings/toggle-quick-settings", value: "['']" }
         - { key: "/org/gnome/shell/keybindings/toggle-overview", value: "['<Super>s']" }
+        - { key: "/org/gnome/settings-daemon/plugins/media-keys/volume-step", value: "['5']" }
     - name: "User configs : Install Starship : Download"
       get_url:
         url: "https://starship.rs/install.sh"
